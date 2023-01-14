@@ -15,14 +15,14 @@ refs.form.addEventListener('input', throttle(onTextareaInput, 500));
 
 
 function onTextareaInput(event) {
-  const message = event.target.value
+  const message = event.target.value;
 
   localStorage.setItem(STORAGE_KEY,message);
 }
 
-populatedForm();
+populatedTextArea();
 
-function populatedForm() {
+function populatedTextArea() {
   const savedFormData = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
   if (savedFormData) {
