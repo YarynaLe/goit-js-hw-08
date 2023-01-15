@@ -15,9 +15,12 @@ refs.form.addEventListener('input', throttle(onTextareaInput, 500));
 
 
 function onTextareaInput(event) {
-  const message = event.target.value;
+    const formName = e.target.name;
+  const formValue = e.target.value;
 
-  localStorage.setItem(STORAGE_KEY,message);
+  formData[formName] = formValue;
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
 populatedTextArea();
