@@ -15,8 +15,8 @@ refs.form.addEventListener('input', throttle(onTextareaInput, 500));
 
 
 function onTextareaInput(event) {
-    const formName = e.target.name;
-  const formValue = e.target.value;
+    const formName = event.target.name;
+  const formValue = event.target.value;
 
   formData[formName] = formValue;
 
